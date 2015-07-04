@@ -1,25 +1,41 @@
-# WhatsApp Desktop
+# WhatsApp
 
 ## Introduction
 
-An experiment with [Electron](http://electron.atom.io), in an attempt to create a simple WhatsApp desktop client with the sole purpose of being able to `⌘-tab` or `alt-tab` to.
+A few hours of tinkering around with [Electron](http://electron.atom.io), in an attempt to create a simple wrapper for WhatsApp Web with the sole purpose of being able to `⌘-tab` or `alt-tab` as an icon on my dock.
 
-## Installation
+Simply a barebones implementation based on [antolinicolae's version](https://github.com/anatolinicolae/whatsapp).
 
-### Install electron
+This should function exactly the same as http://web.whatsapp.com. For jailbroken iOS users, see [WhatsApp Web Enabler](http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=whatsappwebenablerDp)
+
+## Release
+
+See [Releases](https://github.com/skewedlines/WhatsApp-Desktop/releases)
+
+## Build
+
+### Dependencies
+- [Electron](https://github.com/atom/electron)
+- [Electron Packager](https://github.com/maxogden/electron-packager)
+
+### Package
+
+Package the app into an executable application
+
 ```bash
-$ npm install electron-prebuilt -g
+$ cd <Project folder>
+
+$ electron-packager ./ WhatsApp --platform=darwin --arch=x64 --version=0.29.1 --out=./build --icon=./assets/icon/whatsapp.icns --overwrite
 ```
-### Clone the repo
 
-### Run it
+### Run
+
+Runs the app using the global `electron-prebuild`
 ```bash
-$ cd <Repo root>
 $ electron .
 ```
 
 ## To-Do
 
-- Desktop Notifications
-- Save application state
-- Everything else
+- Find out how to convert and use an `.icns` file
+
