@@ -20,8 +20,8 @@ app.on('window-all-closed', function() {
 app.on('ready', function() {
     mainWindow = new BrowserWindow(
         {
-            width: 800,
-            height: 600,
+            width: 1280,
+            height: 800,
             'web-preferences': {
                 javascript: true,
                 plugins: true,
